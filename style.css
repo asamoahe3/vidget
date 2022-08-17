@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --gray-gradient: linear-gradient(to top, #e0e3e6, #e9eaec, #f1f2f3, #ffffff, #ffffff);
+    --gradient-orange: linear-gradient(to left, #ff4d4d, #fe603e, #fa722f, #f48420, #eb9412);
+    --pale-orange: hsl(18, 94%, 54%);
+    --gray-100: rgb(187, 187, 187);
+    --gray-200: hsl(210, 8%, 96%);
+    --dark: hsl(200, 85%, 10%);
+    --dark-200: hsla(198, 87%, 9%, 0.795);
+
+    --font-primary: 'Outfit', sans-serif;
+    --font-secondary: 'Raleway', sans-serif;
+}
+
+/*css reset*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*Header content*/
+.header {
+    min-height: 100vh;
+    background: var(--gray-gradient)
+}
+
+.header--top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.8rem 6rem;
+    background-color: var(--gray-100);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.header-logo {
+    font-family: var(--font-primary);
+    color: var(--dark)
+}
+
+.header nav {
+    margin: 0 auto;
+}
+
+.header--top nav .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/*Hero content*/
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6rem;
+    gap: 2rem;
+}
+
+.hero--content {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+}
+
+.hero--content-heading {
+    font-size: clamp(1.6rem, 4.5vw, 3rem);
+    font-family: var(--font-primary);
+    font-weight: 800;
+    color: var(--pale-orange);
+}
+
+.hero--content-text {
+    font-size: clamp(1.3rem, 4.5vw, 1.2rem);
+    color: var(--dark);
+}
+
+.hero-image--item img {
+    -webkit-animation: bounce 3s ease-in-out infinite;
+    animation: bounce 3s ease-in-out infinite;
+    -webkit-transition: -webkit-transform 300ms cubic-bezier(0, 0, 0.3, 1);
+    transition: -webkit-transform 300ms cubic-bezier(0, 0, 0.3, 1);
+    -o-transition: transform 300ms cubic-bezier(0, 0, 0.3, 1);
+    transition: transform 300ms cubic-bezier(0, 0, 0.3, 1);
+    transition: transform 300ms cubic-bezier(0, 0, 0.3, 1), -webkit-transform 300ms cubic-bezier(0, 0, 0.3, 1);
+    will-change: transform;
+}
+
+@-webkit-keyframes bounce {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+}
+
+/*Link bar content*/
+.link-bar {
+    background-color: hsla(0, 0%, 100%, 0.795);
+    border-radius: 3rem;
+    padding: 0.5rem 1rem;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    justify-content: center;
+    gap: 1rem;
+    width: 70%;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+
+.link-bar input {
+    border: 1px solid rgb(206, 206, 206);
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: block;
+    border-radius: 3rem;
+}
+
+.link-bar input::placeholder {
+    font-size: 1.1rem;
+}
+
+.button {
+    background: var(--gradient-orange);
+    border-radius: 3rem;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    position: relative;
+}
+
+.button:hover {
+    box-shadow: rgba(112, 112, 112, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+}
+
+.button:active {
+    top: -0.2rem;
+}
+
+/**Results content*/
+.results {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    max-width: 70%;
+    margin: 3rem auto;
+    padding: 1.8rem;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.results .video-info {
+    display: grid;
+    grid-template-columns: 39.5% 60%;
+}
+
+.video-info--text {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+}
+
+.video-info--text h2 {
+    font-weight: 600;
+    color: var(--dark-200);
+}
+
+/* 
+Download content
+*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    color: var(--dark);
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid #ccc;
+}
+
+td {
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.btn-download {
+    border: 1px solid rgb(95, 194, 13);
+    border-radius: 0.3rem;
+    padding: 0.4rem 1rem;
+    color: rgb(95, 194, 13);
+    font-weight: 500;
+}
+
+.btn-download:hover {
+    background-color: rgb(95, 194, 13);
+    color: white;
+}
+
+
+/*Steps to download*/
+.steps-content {
+    padding: 0 6rem;
+}
+
+.steps-content--title {
+    font-weight: 700;
+    color: var(--dark);
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.steps-inner {
+    background-color: var(--gray-200);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.steps-inner--card {
+    padding: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+
+.steps-inner .steps-inner--card:nth-child(2) {
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}

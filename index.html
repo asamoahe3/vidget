@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidget Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header--top">
+            <h1 class="header-logo">Vidget</h1>
+            <nav>
+                <ul class="nav-item">
+                    <li class="nav-link"><a href="home">Home</a></li>
+                    <li class="nav-link"><a href="#tools">Other Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--Hero content-->
+        <section class="hero">
+            <div class="hero--content">
+                <h1 class="hero--content-heading">Free youtube video downloader tool for you.</h1>
+                <p class="hero--content-text"> No hassel in downloading youtube videos. Just copy and past your desire
+                    video link and smash the download button. </p>
+            </div>
+            <!--Hero image-->
+            <div class="hero--image">
+                <div class="hero-image--item"> <img src="./img/hero-image.png" alt=""> </div>
+            </div>
+        </section>
+    </header>
+    <main class="container">
+        <!--Link bar-->
+        <div class="link-bar"> <input type="text" id="userLink"> <button class="button">Download</button> </div>
+        <div class="results">
+            <div class="video-info">
+                <div class="thum"> <img src="https://i4.ytimg.com/vi/pTFZFxd4hOI/mqdefault.jpg" alt="" id="outImage">
+                </div>
+                <div class="video-info--text">
+                    <h2 id="title">Docker Tutorial for Beginners</h2>
+                    <p class="duruation">Duration: <span class="duration"></span> </p>
+                    <p class="veiw-count">Views: <span class="view-count"></span> </p>
+                </div>
+            </div>
+            <div class="download-tb">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Quality</th>
+                            <th>Type</th>
+                            <th>Fps</th>
+                            <th>File size</th>
+                            <th>Download</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>720</td>
+                            <td>mp4</td>
+                            <td>30</td>
+                            <td>-</td>
+                            <td><a href="" target="_blank" class="btn-download">Download</a></td>
+                        </tr>
+                        <tr>
+                            <td>720p</td>
+                            <td>mp4</td>
+                            <td>30</td>
+                            <td>-</td>
+                            <td><a href="" target="_blank" class="btn-download">Download</a></td>
+                        </tr>
+                        <tr>
+                            <td>360p</td>
+                            <td>mp4</td>
+                            <td>30</td>
+                            <td>76.29 MB</td>
+                            <td><a href="" target="_blank" class="btn-download">Download</a></td>
+                        </tr>
+                        <tr>
+                            <td>108p60</td>
+                            <td>mp4</td>
+                            <td>60</td>
+                            <td>158.30 MB</td>
+                            <td><a href="" target="_blank" class="btn-download">Download</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="steps-content">
+            <h1 class="steps-content--title">How to download a youtube video?</h1>
+            <p class="step-content--text">To download a youtube video you should do steps below.</p>
+            <div class="steps-inner">
+                <div class="steps-inner--card">
+                    <li class="icon"><img src="./img/copy.png" alt=""></li>
+                    <h3 class="card-heading">Copy page address</h3>
+                    <p class="card-text"> Copy your youtube video page url from youtube that you want download.You can
+                        use Ctrl+C on addressbar of your browser or copy from context menu. </p>
+                </div>
+                <div class="steps-inner--card">
+                    <li class="icon"><img src="./img/mouse.png" alt=""></li>
+                    <h3 class="card-heading">Paste into address field</h3>
+                    <p class="card-text"> Paste the copied link in the address field at the top of this page and click
+                        the download button. You can paste url with Ctrl+C or hold on the field and click on paste
+                        option. </p>
+                </div>
+                <div class="steps-inner--card">
+                    <li class="icon"><img src="./img/cloud_download.png" alt=""></li>
+                    <h3 class="card-heading">Download video</h3>
+                    <p class="card-text"> You will get a list of video file for download.The list contains some video
+                        qualities. By click on the download link of your custom quality then download proccess will
+                        start. </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!---=====================JS conent=============================-->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
