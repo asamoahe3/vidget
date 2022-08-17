@@ -6,7 +6,7 @@
         e.preventDefault();
 
         // Validate user input
-        if (inputURL.value.trim() == "" || inputURL.value.trim == " " || inputURL.value.trim() == null) {
+        if (inputURL.value.trim() == "" || inputURL.value.trim() == " " || inputURL.value.trim() == null) {
             console.log("You entered nothign at all.")
         } else {
             async function getVideo() {
